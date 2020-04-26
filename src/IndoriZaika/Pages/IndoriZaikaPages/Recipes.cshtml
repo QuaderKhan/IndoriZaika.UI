@@ -1,0 +1,33 @@
+﻿@page
+@model IndoriZaika.Pages.RecipesModel
+@{
+}
+
+<h1>@Model.PageHeading</h1>
+
+<form  method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" value="searchId"/>
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="glyphicon glyphicon-searh"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+
+</form>
+
+<table class="table">
+    @foreach (var recipe in Model.recipes)
+    {
+        <tr class="d-table-row">
+            <td>@recipe.Id</td>
+            <td>@recipe.Name</td>
+            <td>@recipe.RecipeType</td>
+            <td>@recipe.ThumbnailImagePath</td>
+            <td>@recipe.VideoPath</td>
+        </tr>
+    }
+</table>

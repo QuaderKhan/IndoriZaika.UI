@@ -1,0 +1,19 @@
+﻿@page
+@model IndoriZaika.Pages.CuisinesModel
+@{
+}
+
+<h1>Indori Zaika Cuisines</h1>
+
+@Model.Message
+
+<table class="table">
+    @foreach (var cuisine in Model.Cuisines)
+    {
+        <tr>
+            <td>@cuisine.Id</td>
+            <td>@cuisine.Name</td>
+            <td>@cuisine.Type</td>
+        </tr>
+    }
+</table>
